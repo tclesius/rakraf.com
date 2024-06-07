@@ -128,14 +128,7 @@ body {
 }
 
 .nvitems {
-    opacity: 0
-}
-
-#navitem-a {
-    border-bottom: 1px solid #000
-}
-
-#navitem-b {
+    opacity: 0;
     border-bottom: 1px solid #000
 }
 
