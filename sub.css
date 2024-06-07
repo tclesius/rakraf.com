@@ -1,0 +1,258 @@
+@font-face {
+    font-family: '_pepsi_regular';
+    src: url("./font/PEPSI_pl.woff2") format("woff2"),
+    url("./font/PEPSI_pl.woff") format("woff");
+    font-weight: 200;
+}
+
+html {
+    width: 100%;
+    height: 100%
+}
+
+.page-content {
+    opacity: 1;
+    transition: .3s;
+    width: 100%
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+::-moz-selection {
+    background: #f2f2f2
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: 0 0
+}
+
+::selection {
+    background: #f2f2f2
+}
+
+body {
+    background-color: #fff
+}
+
+.rakraf-standard {
+    font-family: "_pepsi_regular";
+    color: #000
+}
+
+.rakraf-plain {
+    font-family: monospace;
+    color: #000
+}
+
+.rcenter-v {
+    text-align: center
+}
+
+.acenter-v-h {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+}
+
+.slide {
+    background-color: rgba(255,255,255,0);
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0s;
+    z-index: 2
+}
+
+.mid-logo {
+    border: 1px solid #000;
+    border-radius: 5px
+}
+
+.mid-logo h1 {
+    display: inline-block;
+    padding: 10px;
+    cursor: default
+}
+
+.mid-logo h1:hover {
+    color: #fff;
+    background-color: #000
+}
+
+.bottom {
+    display: inline-block;
+    text-align: center;
+    opacity: 1;
+    z-index: -1
+}
+
+.bottom-logo {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1em;
+    cursor: default
+}
+
+.bottom-menue {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.bottom-nav {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 72px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: .25s
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 15px;
+    text-align: center
+}
+
+.bottom-nav a:hover {
+    color: teal
+}
+
+.nvitems {
+    opacity: 0
+}
+
+#navitem-a {
+    border-bottom: 1px solid #000
+}
+
+#navitem-b {
+    border-bottom: 1px solid #000
+}
+
+.page-content {
+    opacity: 1;
+    transition: .3s;
+    width: 100%
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    max-width: 1200px
+}
+
+.pieces-wrapper {
+    padding: 20px
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px
+}
+
+.column {
+    flex: 40%
+}
+
+.column img {
+    width: 100%
+}
+
+.describtion h4 {
+    font-family: monospace
+}
+
+.pieces-wrapper {
+    background-image: url(/d97055aed88ca161f73c9a284c88cedb4d754252/37882/db/img/ramen.svg);
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+@media screen and (min-width: 900px) {
+    .fscr {
+        display:flex;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        top: 0;
+        left: 0
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        flex:50%;
+        margin: 5%
+    }
+
+    .container {
+        width: 100%
+    }
+}
+
+.notification {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1em;
+    margin-top: 20em
+}
+
+.mail {
+    text-align: center
+}
+
+.mail form {
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 1em;
+    font-family: monospace
+}
+
+.mail form input {
+    height: 20px;
+    border: 1px solid #000
+}
+
+.mail form input:focus {
+    outline: 0
+}
+
+.mail form button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    font-family: monospace;
+    width: 50px;
+    height: 22px;
+    text-align: center
+}
+
+.mail form button:hover {
+    background-color: teal;
+    color: #000
+}
