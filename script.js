@@ -8,26 +8,27 @@ function Animation() {
     x[0].classList.add("slideAnimation");
     z[0].classList.add("despawnAnimation");
     l.classList.add("slideOutAnimation");
-    setTimeout(function() {
+    setTimeout(function () {
         z[0].remove();
         l.remove()
     }, 4e3);
     k[0].classList.add("zIndex");
     k[0].classList.add("spawnAnimation");
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementsByClassName("page-content")[0].style.opacity = "1"
     }, 150)
 }
-$(document).ready(function() {
-    var weekDayN = ["", "money monday", "dienstag", "woo back wednesday", "dizzy donnerstag", "turn up friday", "cozy saturday", "holy sunday"];
-    var d = new Date;
-    var n = d.getDay();
+
+$(document).ready(function () {
+    const weekDayN = ["", "money monday", "dienstag", "woo back wednesday", "dizzy donnerstag", "turn up friday", "cozy saturday", "holy sunday"];
+    const d = new Date;
+    const n = d.getDay();
     if (document.getElementById("wochentag")) {
         document.getElementById("wochentag").innerHTML = weekDayN[n]
     }
 });
-var fl2 = false;
-window.onload = function() {
+let fl2 = false;
+window.onload = function () {
     document.getElementById("button").onclick = function Nav() {
         if (document.getElementById("nav").style.height === "100px") {
             return close()
@@ -35,12 +36,14 @@ window.onload = function() {
         return open()
     }
     ;
+
     function open() {
         fl2 = true;
         document.getElementsByClassName("slide")[0].style.transition = "0s";
         document.getElementById("nav").style.height = "100px";
         document.getElementById("nav").style.opacity = "1"
     }
+
     function close() {
         fl2 = false;
         document.getElementsByClassName("slide")[0].style.transition = "1s";
@@ -49,11 +52,11 @@ window.onload = function() {
     }
 }
 ;
-var fl = false;
-$(document).ready(function() {
+let fl = false;
+$(document).ready(function () {
     if (!fl) {
-        new ResizeSensor(jQuery(".slide"),function() {
-                slideheight = $(".slide").height();
+        new ResizeSensor($(".slide"), function () {
+                let slideheight = $(".slide").height();
                 if (slideheight <= 80) {
                     fl = true
                 }
@@ -61,9 +64,9 @@ $(document).ready(function() {
         )
     }
 });
-$(document).ready(function() {
-    new ResizeSensor(jQuery("#nav"),function() {
-            navheight = $("#nav").height();
+$(document).ready(function () {
+    new ResizeSensor($("#nav"), function () {
+            let navheight = $("#nav").height();
             if (navheight <= 95) {
                 document.getElementsByClassName("slide")[0].style.backgroundColor = "rgb(255, 255, 255)";
                 document.getElementsByClassName("nvitems")[0].style.opacity = "1";
@@ -77,14 +80,14 @@ $(document).ready(function() {
         }
     )
 });
+
 function blendIn() {
-    style = window.getComputedStyle(document.getElementsByClassName("slide")[0]),
-        bgcolor = style.getPropertyValue("background-color");
     if (fl && !fl2) {
         document.getElementsByClassName("slide")[0].style.backgroundColor = "rgb(255, 255, 255)";
         document.getElementsByClassName("slide")[0].style.transition = "0.5s"
     }
 }
+
 function blendOut() {
     if (fl && !fl2) {
         document.getElementsByClassName("slide")[0].style.backgroundColor = "rgba(255, 255, 255, 0)";
