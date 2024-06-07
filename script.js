@@ -1,9 +1,9 @@
 function Animation() {
-    var a = document.getElementsByClassName("mid-logo");
-    var k = document.getElementsByClassName("bottom");
-    var z = document.getElementsByClassName("mid-logo");
-    var x = document.getElementsByClassName("slide");
-    var l = document.getElementById("wochentag");
+    const a = document.getElementsByClassName("mid-logo");
+    const k = document.getElementsByClassName("bottom");
+    const z = document.getElementsByClassName("mid-logo");
+    const x = document.getElementsByClassName("slide");
+    const l = document.getElementById("wochentag");
     a[0].classList.add("colorChange");
     x[0].classList.add("slideAnimation");
     z[0].classList.add("despawnAnimation");
